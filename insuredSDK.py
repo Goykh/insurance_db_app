@@ -3,7 +3,7 @@ from insured import InsuredPerson
 
 
 connection = sqlite3.connect('pojistenci.db')
-c = conneciton.cursor()
+c = connection.cursor()
 c.execute('CREATE TABLE IF NOT EXISTS pojisteni '
           '(krestni_jmeno TEXT, prijmeni TEXT, vek INTEGER, telefonnni_cislo INTEGER)')
 connection.close()
