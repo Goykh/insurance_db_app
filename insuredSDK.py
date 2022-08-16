@@ -2,11 +2,11 @@ import sqlite3
 from insured import InsuredPerson
 
 
-conneciton = sqlite3.connect('pojistenci.db')
+connection = sqlite3.connect('pojistenci.db')
 c = conneciton.cursor()
 c.execute('CREATE TABLE IF NOT EXISTS pojisteni '
           '(krestni_jmeno TEXT, prijmeni TEXT, vek INTEGER, telefonnni_cislo INTEGER)')
-conneciton.close()
+connection.close()
 
 
 def add_insured(insured):
