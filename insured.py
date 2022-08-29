@@ -5,7 +5,6 @@ class InsuredPerson:
         self.last_name = last_name
         self.phone_number = phone_number
         self.age = age
-        # self.name = f"{first_name} {last_name}"
 
     def __str__(self):
         return f"Jméno: {self.first_name} {self.last_name}\nTelefonní číslo: {self.phone_number}\nVěk: {self.age}"

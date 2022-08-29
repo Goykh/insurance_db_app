@@ -2,11 +2,11 @@ import sqlite3
 from insured import InsuredPerson
 
 
-conneciton = sqlite3.connect('pojistenci.db')
-c = conneciton.cursor()
+connection = sqlite3.connect('pojistenci.db')
+c = connection.cursor()
 c.execute('CREATE TABLE IF NOT EXISTS pojisteni '
           '(krestni_jmeno TEXT, prijmeni TEXT, vek INTEGER, telefonnni_cislo INTEGER)')
-conneciton.close()
+connection.close()
 
 
 def add_insured(insured):
@@ -44,8 +44,7 @@ def get_insured_by_name(first_name, last_name):
     if not data:
         return "Záznam nenalezen!"
 
-    print(f"Jméno: {data[0]} {data[1]}\nVěk: {data[2]}\n"
-          f"Telefonní číslo: {data[3]}")
+    return f"Jméno: {data[0]} {data[1]}\nVěk: {data[2]}\nTelefonní číslo: {data[3]}"
 
 
 def delete_insured(first_name, last_name):
