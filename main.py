@@ -98,7 +98,8 @@ Vyberte si akci:
 
                 self.clear_screen()
 
-    def clear_screen(self):
+    @staticmethod
+    def clear_screen():
         """
         Clears the CMD window.
         """
